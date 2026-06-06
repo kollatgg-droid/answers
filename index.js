@@ -9,7 +9,7 @@ export default {
       const chatId = update.message?.chat?.id;
       const userId = update.message?.from?.id;
 
-      const TEACHER_ID = 123456789; // <-- поменяй на ID училки
+      const TEACHER_ID = 8510843986; // <-- поменяй на ID училки
 
       // доступ только учителю
       if (userId !== TEACHER_ID) {
@@ -22,7 +22,7 @@ export default {
       if (message === "2") answer = "Ответ: x = 12";
       if (message === "3") answer = "Ответ: x = -3";
 
-      await fetch(`https://api.telegram.org/bot${env.BOT_TOKEN}/sendMessage`, {
+      await fetch(`https://api.telegram.org/bot${env.8635608238:AAEXLRzRWpDaskmA4SG6cphiLrTBOvUT_2g}/sendMessage`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
