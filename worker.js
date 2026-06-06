@@ -11,15 +11,24 @@ export default {
 
     let answer = "Ma'lumot topilmadi.";
 
-    const pages = {
-      "25": "25-sahifa",
-      "26": "26-sahifa",
-      "27": "27-sahifa",
-      "54": "54-sahifa"
-    };
+    if (text === "/start") {
+      answer = "8-sinf Algebra botiga xush kelibsiz!";
+    }
 
-    if (pages[text]) {
-      answer = pages[text];
+    if (text === "25") {
+      answer = "25-sahifa";
+    }
+
+    if (text === "26") {
+      answer = "26-sahifa";
+    }
+
+    if (text === "27") {
+      answer = "27-sahifa";
+    }
+
+    if (text === "54") {
+      answer = "54-sahifa";
     }
 
     await fetch(
