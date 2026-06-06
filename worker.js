@@ -23,7 +23,7 @@ export default {
     }
 
     await fetch(
-      "https://api.telegram.org/botВАШ_ТОКЕН/sendMessage",
+      "https://api.telegram.org/bot8635608238:AAEXLRzRWpDaskmA4SG6cphiLrTBOvUT_2g/sendMessage",
       {
         method: "POST",
         headers: {
