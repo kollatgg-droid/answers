@@ -22,7 +22,7 @@ export default {
       if (message === "2") answer = "Ответ: x = 12";
       if (message === "3") answer = "Ответ: x = -3";
 
-      await fetch(`https://api.telegram.org/bot${env.BOT_TOKEN = 8635608238:AAEXLRzRWpDaskmA4SG6cphiLrTBOvUT_2g}/sendMessage`, {
+      await fetch(`https://api.telegram.org/bot${env.BOT_TOKEN, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
