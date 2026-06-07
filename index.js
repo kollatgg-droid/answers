@@ -3,26 +3,22 @@ export default {
     const url = new URL(request.url);
 
     if (url.pathname !== "/webhook") {
-      return new Response("Telegram bot is running");
+      return new Response("OK");
     }
 
-    try {
-      const update = await request.json();
+    const update = await request.json();
 
-      await fetch(`https://api.telegram.org/bot${env.BOT_TOKEN}/sendMessage`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          chat_id: update.message.chat.id,
-          text: "TEST OK"
-        })
-      });
+    await fetch(`https://api.telegram.org/bot${env.BOT_TOKEN}/sendMessage`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        chat_id: update.message.chat.id,
+        text: "TEST OK"
+      })
+    });
 
-      return new Response("ok");
-    } catch (e) {
-      return new Response("error");
-    }
+    return new Response("ok");
   }
 };
